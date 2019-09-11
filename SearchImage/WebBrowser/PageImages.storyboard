@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eEa-Nj-vOc">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Page Images View Controller-->
+        <scene sceneID="bfS-Fz-ucb">
+            <objects>
+                <viewController storyboardIdentifier="PageImagesViewController" id="eEa-Nj-vOc" customClass="PageImagesViewController" customModule="SearchImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lhd-ib-oHa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XbG-FJ-BC4">
+                                <rect key="frame" x="0.0" y="44" width="409" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZZp-iD-yNT">
+                                    <size key="itemSize" width="141" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="gx4-8I-9X3" customClass="PageImagesCollectionViewCell" customModule="SearchImage" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="141" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="141" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="aDC-9g-MQt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="141" height="150"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="aDC-9g-MQt" secondAttribute="trailing" id="HSz-R2-r1r"/>
+                                            <constraint firstItem="aDC-9g-MQt" firstAttribute="top" secondItem="gx4-8I-9X3" secondAttribute="top" id="eMQ-TE-A37"/>
+                                            <constraint firstItem="aDC-9g-MQt" firstAttribute="leading" secondItem="gx4-8I-9X3" secondAttribute="leading" id="eaD-O4-5Pi"/>
+                                            <constraint firstAttribute="bottom" secondItem="aDC-9g-MQt" secondAttribute="bottom" id="lyM-af-Uqb"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="aDC-9g-MQt" id="ZiM-x8-n9Q"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ee5-J6-kvf" firstAttribute="trailing" secondItem="XbG-FJ-BC4" secondAttribute="trailing" constant="5" id="Kvq-zu-tRv"/>
+                            <constraint firstItem="XbG-FJ-BC4" firstAttribute="leading" secondItem="ee5-J6-kvf" secondAttribute="leading" id="P14-By-962"/>
+                            <constraint firstItem="ee5-J6-kvf" firstAttribute="bottom" secondItem="XbG-FJ-BC4" secondAttribute="bottom" id="VPK-Ma-WDN"/>
+                            <constraint firstItem="XbG-FJ-BC4" firstAttribute="top" secondItem="ee5-J6-kvf" secondAttribute="top" id="XsI-Hv-Ybj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ee5-J6-kvf"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="XbG-FJ-BC4" id="d5y-dn-fwW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OZ6-0q-o7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-555.07246376811599" y="-30.133928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sample" width="151.5" height="93"/>
+    </resources>
+</document>

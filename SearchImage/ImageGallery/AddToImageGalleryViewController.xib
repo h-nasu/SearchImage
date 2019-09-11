@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddToImageGalleryViewController" customModule="SearchImage" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="5vp-qQ-TW7" id="g7O-op-5sN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l0a-18-Xi0">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <barButtonItem systemItem="cancel" id="Ddb-1f-dmt">
+                            <connections>
+                                <action selector="tapCancel:" destination="-1" id="5wg-rp-lHb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Pri-8s-u1Z"/>
+                        <barButtonItem systemItem="save" id="YOJ-PH-IkM">
+                            <connections>
+                                <action selector="tapSave:" destination="-1" id="aud-RI-cyc"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5vp-qQ-TW7">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Gallery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbT-cX-KwH">
+                    <rect key="frame" x="148.5" y="54" width="117" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5vp-qQ-TW7" firstAttribute="top" secondItem="l0a-18-Xi0" secondAttribute="bottom" id="HnQ-re-gOJ"/>
+                <constraint firstItem="sbT-cX-KwH" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="IIh-jx-eHS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5vp-qQ-TW7" secondAttribute="bottom" id="cla-A7-E2C"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="l0a-18-Xi0" secondAttribute="trailing" id="eNo-bD-Fcf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5vp-qQ-TW7" secondAttribute="trailing" id="iOO-kK-hIz"/>
+                <constraint firstItem="5vp-qQ-TW7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mbb-22-wFl"/>
+                <constraint firstItem="l0a-18-Xi0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="p6q-gk-iAG"/>
+                <constraint firstItem="sbT-cX-KwH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="prO-Bx-UbM"/>
+                <constraint firstItem="l0a-18-Xi0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xig-AN-Zn6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.782608695652179" y="34.821428571428569"/>
+        </view>
+    </objects>
+</document>
